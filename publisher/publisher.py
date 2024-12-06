@@ -15,7 +15,7 @@ import logging
 # ------------       Global config        -----------------
 app = Flask(__name__)
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
-aws_region = os.getenv("AWS_DEFAULT_REGION", default='eu-west-1')
+aws_region = os.getenv("AWS_DEFAULT_REGION", default='us-east-1')
 
 # ------------    SNS (Message sending)     ---------------
 sns_client = boto3.client('sns', region_name=aws_region)
