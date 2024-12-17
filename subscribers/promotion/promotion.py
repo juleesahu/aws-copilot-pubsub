@@ -10,7 +10,7 @@ import logging
 
 # ------------       Global config        -----------------
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
-aws_region = os.getenv("AWS_DEFAULT_REGION", default='eu-west-1')
+aws_region = os.getenv("AWS_DEFAULT_REGION", default='us-east-1')
 sqs_client = boto3.client('sqs', region_name=aws_region)
 
 # ------------       Main functions       -----------------
